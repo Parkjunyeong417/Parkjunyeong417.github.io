@@ -3,10 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>박준영 포트폴리오</title>
+  <title>Junyeong Park's Portfolio</title>
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: Arial, sans-serif; line-height: 1.6; background: #f4f4f4; color: #333; }
+    
+    #about ul ul { padding-left: 1.5rem; list-style-position: outside; }
+    body { margin: 0; font-family: Arial, sans-serif; line-height: 1.6; background: #f4f4f4; color: #333; }
     header { background: #333; color: #fff; padding: 20px 0; text-align: center; }
     header h1 { font-size: 2rem; }
     nav ul { display: flex; justify-content: center; list-style: none; margin-top: 10px; }
@@ -25,8 +26,8 @@
   <header>
     <h1>Junyeong Park's Portfolio</h1>
     <nav>
-      <ul>
-        <li><a href="#about">About</a></li>
+      <ul style="padding: 0;">
+        <li><a href="#about">About Me</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
@@ -34,29 +35,75 @@
   </header>
 
   <section id="about">
-    <h2>About Me</n>
-    <p>안녕하세요! 저는 건국대학교 글로컬캠퍼스 컴퓨터공학과에 재학 중인 박준영입니다. 주로 C, C++, Java, 그리고 웹 개발을 공부하고 있으며, 시스템 프로그래밍과 임베디드에 관심이 많습니다.</p>
+<h2>About Me</h2>
+<ul>
+  <li>Name: Junyeong Park</li>
+  <li>DOB: April 17, 2002</li>
+  <li>School: Department of Computer Engineering, Konkuk University</li>
+  <li>
+    Skills: 
+    <ul>
+      <li>C / C++ / C# / Java / Python</li>
+      <li>Embedded Systems</li>
+      <li>Web Development (HTML5 / CSS3 / JavaScript)</li>
+    </ul>
+  </li>
+  <li><a href="https://www.acmicpc.net/user/prakjun417" target="_blank">Baekjoon Profile(prakjun417)</a></li>
+</ul>
   </section>
 
   <section id="projects" class="projects">
     <h2>Projects</h2>
-    <div class="project">
-      <h3>로또 당첨 분석 프로그램</h3>
-      <p>텍스트/이진 파일 입출력, 구조체 배열 정렬 등을 이용하여 로또 번호별 당첨 횟수를 분석하는 C 프로젝트입니다.</p>
-      <p><a href="https://github.com/Parkjunyeong417/lotto-analysis" target="_blank">GitHub Repo</a></p>
-    </div>
-    <div class="project">
-      <h3>개인 블로그 웹사이트</h3>
-      <p>GitHub Pages와 Jekyll을 사용하여 생성한 정적 블로그입니다.</p>
-      <p><a href="https://parkjunyeong417.github.io" target="_blank">Live Site</a></p>
-    </div>
-    <!-- 추가 프로젝트는 여기에 계속 추가하세요 -->
+    <ul>
+      <li><h3>>
+        <ol>
+          <li>
+            <div class="project">
+              <h4>first project</h4>
+              <p>프로젝트 설명</p>
+              <p><a href="https://github.com/Parkjunyeong417" target="_blank">GitHub Repositoy 링크 걸기</a></p>
+            </div>
+          </li>
+
+          <li>    
+            <div class="project">
+              <h4>second project</h4>
+              <p>프로젝트 설명</p>
+              <p><a href="https://github.com/Parkjunyeong417" target="_blank">GitHub Repositoy 링크 걸기</a></p>
+            </div>
+          </li>
+        </ol>
+
+      <li><h3>Clone-Coding</h3></li>
+        <ol>
+          <li>
+            <div class="project">
+              <h4>KakaoTalk</h4>
+              <p>카카오톡 클론코딩 설명</p>
+              <p><a href="https://github.com/Parkjunyeong417" target="_blank">GitHub Repositoy 링크 걸기</a></p>
+            </div>
+          </li>
+
+          <li>    
+            <div class="project">
+              <h4>Youtube</h4>
+              <p>유튜브 클론코딩 설명</p>
+              <p><a href="https://github.com/Parkjunyeong417" target="_blank">GitHub Repositoy 링크 걸기</a></p>
+            </div>
+          </li>
+        </ol>
+    </ul>
   </section>
 
   <section id="contact">
     <h2>Contact</h2>
-    <p>이메일: <a href="mailto:prakjun417@gmail.com">prakjun417@gmail.com</a></p>
-    <p>GitHub: <a href="https://github.com/Parkjunyeong417" target="_blank">https://github.com/Parkjunyeong417</a></p>
+    <ul>
+      <li>ph.: 010-0000-0000</li>
+      <li>e-mail: <a href="mailto:prakjun417@gmail.com" target="_blank">prakjun417@gmail.com</a></li>
+      <li>insta: <a href="https://www.instagram.com/aruneonx" target="_blank">@aruneonx</a></li>
+      <li>github: <a href="https://github.com/Parkjunyeong417" target="_blank">Parkjunyeong417</a></li>
+    </ul>
+
   </section>
 
   <footer>
@@ -64,3 +111,4 @@
   </footer>
 </body>
 </html>
+
