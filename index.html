@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Junyeong Park · Portfolio</title>
+  <meta name="description" content="박준영 Junyeong Park – Konkuk University 컴퓨터공학 포트폴리오" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;600;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    /* ===== Design Tokens ===== */
+    :root {
+      --bg: #0b0c10;
+      --bg-soft: #111318;
+      --card: #151922;
+      --text: #eef2f7;
+      --muted: #b5c0d0;
+      --accent: #5eead4;
+      --accent-ink: #0b4740;
+      --border: rgba(255,255,255,.08);
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+      --radius: 16px;
+      --radius-sm: 12px;
+      --maxw: 1024px;
+    }
+
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg: #f6f7fb;
+        --bg-soft: #ffffff;
+        --card: #ffffff;
+        --text: #121318;
+        --muted: #4b5563;
+        --accent: #06b6d4;
+        --accent-ink: #06232a;
+        --border: rgba(2,6,23,.08);
+        --shadow: 0 10px 30px rgba(2,6,23,.08);
+      }
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: linear-gradient(180deg, var(--bg) 0%, var(--bg-soft) 100%); color: var(--text); font-family: "Pretendard", system-ui, -apple-system, Segoe UI, Roboto, "Noto Sans KR", Inter, Arial, sans-serif; line-height: 1.6; }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+    .container { width: min(100%, var(--maxw)); margin-inline: auto; padding-inline: 20px; }
+    .chip { display:inline-flex; align-items:center; gap:.5rem; padding:.4rem .75rem; border:1px solid var(--border); border-radius: 999px; font-size:.9rem; background: transparent; }
+    .btn { display:inline-block; padding:.7rem 1rem; border-radius: 12px; border:1px solid var(--border); backdrop-filter: blur(6px); transition: transform .2s ease, background .2s ease, border-color .2s ease; font-weight:600; }
+    .btn:hover { transform: translateY(-2px); border-color: transparent; background: rgba(255,255,255,.08); }
+    .btn.accent { background: var(--accent); color: var(--accent-ink); border-color: transparent; }
+    .btn.accent:hover { filter: saturate(110%); transform: translateY(-2px); }
+    header.site { position: sticky; top: 0; z-index: 20; border-bottom: 1px solid var(--border); backdrop-filter: saturate(180%) blur(8px); background: color-mix(in oklab, var(--bg) 92%, transparent); }
+    .nav { display:flex; align-items:center; justify-content:space-between; height:64px; }
+    .brand { font-weight:700; letter-spacing:.2px; }
+    .brand b { color: var(--accent); }
+    .nav a { color: var(--muted); font-weight:600; }
+    .nav ul { list-style:none; display:flex; gap: 1rem; margin:0; padding:0; }
+    .nav a:hover { color: var(--text); }
+    .hero { padding: 64px 0 24px; text-align:center; }
+    .hero h1 { font-size: clamp(1.8rem, 3vw, 2.4rem); line-height:1.25; margin: 0; }
+    .hero p { color: var(--muted); margin:.75rem auto 1.25rem; max-width: 56ch; }
+    .hero .actions { display:flex; gap:.75rem; justify-content:center; flex-wrap:wrap; }
+    section { padding: 28px 0 6px; }
+    .section-card { background: var(--card); border:1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow); padding: 24px; }
+    .section-card + .section-card { margin-top: 18px; }
+    h2.section-title { font-size: 1.25rem; margin: 0 0 14px; display:flex; align-items:center; gap:.6rem; }
+    h2.section-title::after { content:""; flex:1; height:1px; background: var(--border); }
+    .about-grid { display:grid; grid-template-columns: 1.1fr .9fr; gap: 18px; }
+    .about-list { margin: 0; padding: 0; list-style: none; }
+    .about-list li { padding:.45rem 0; border-bottom:1px dashed var(--border); }
+    .about-list li:last-child { border-bottom:0; }
+    .skills { display:flex; flex-wrap: wrap; gap:.5rem; margin-top:.5rem; }
+    .projects-grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; }
+    .org-grid { display:grid; grid-template-columns: repeat(2, 1fr); gap:14px; }
+    @media (max-width: 600px) {
+      .org-grid { grid-template-columns: 1fr; }
+    }
+    .project { background: linear-gradient(180deg, color-mix(in oklab, var(--card) 92%, transparent), var(--card)); border:1px solid var(--border); border-radius: var(--radius-sm); padding: 18px; transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease; }
+    .project:hover { transform: translateY(-3px); box-shadow: 0 16px 36px rgba(0,0,0,.28); border-color: color-mix(in oklab, var(--accent) 25%, var(--border)); }
+    .project h3 { margin:.1rem 0 .4rem; font-size:1.05rem; }
+    .project p { margin:.25rem 0; color: var(--muted); }
+    .project .links { display:flex; gap:.5rem; flex-wrap:wrap; margin-top:.6rem; }
+    ol.reset { list-style:none; padding-left:0; margin:0; display:grid; gap:14px; }
+    .contact-list { list-style:none; padding:0; margin:0; display:grid; gap:.4rem; }
+    .contact-list a { color: var(--text); text-decoration: underline; text-underline-offset: 2px; }
+    footer.site { text-align:center; color: var(--muted); padding: 32px 0 60px; }
+    .muted { color: var(--muted); }
+    .spacer { height: 8px; }
+    @media (max-width: 860px) {
+      .about-grid { grid-template-columns: 1fr; }
+      .nav ul { display:none; }
+      .nav .menu { display:inline-flex; }
+    }
+    @media (min-width: 861px) {
+      .nav .menu { display:none; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;">본문으로 건너뛰기</a>
+  <header class="site">
+    <div class="container nav">
+      <div class="brand">Junyeong <b>Park</b></div>
+      <nav aria-label="Primary">
+        <button class="menu btn" aria-expanded="false" aria-controls="nav-list" onclick="const u=document.getElementById('nav-list');const open=u.style.display!=='flex';u.style.display=open?'flex':'none';this.setAttribute('aria-expanded',open)">메뉴</button>
+        <ul id="nav-list">
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main id="main" class="container">
+    <section class="hero">
+      <h1>안녕하세요, 박준영입니다 ✨</h1>
+      <p class="muted">저의 포트폴리오를 봐주셔서 감사합니다.</p>
+      <div class="actions">
+        <a class="btn accent" href="#projects">프로젝트 바로가기</a>
+        <a class="btn" href="https://github.com/Parkjunyeong417" target="_blank" rel="noreferrer">GitHub 보기</a>
+      </div>
+    </section>
+    <section id="about" class="section-card" aria-labelledby="about-title">
+      <h2 id="about-title" class="section-title">About Me</h2>
+      <div class="about-grid">
+        <ul class="about-list">
+            <li><strong>Name:</strong> Junyeong Park</li>
+            <li><strong>DOB:</strong> 2002-04-17</li>
+            <li><strong>School:</strong> Konkuk University, Department of Computer Engineering</li>
+            <li><strong>Baekjoon:</strong> <a href="https://www.acmicpc.net/user/prakjun417" target="_blank" rel="noreferrer">prakjun417</a></li>
+            <li><strong>Skills</strong>
+            <div class="skills" aria-label="Skills list">
+                <span class="chip">C</span>
+                <span class="chip">C++</span>
+                <span class="chip">C#</span>
+                <span class="chip">Java</span>
+                <span class="chip">Python</span>
+                <span class="chip">Dart</span>
+                <span class="chip">HTML5</span>
+                <span class="chip">CSS3</span>
+                <span class="chip">JavaScript</span>
+                <span class="chip">Flutter</span>
+            </div></li>
+        </ul>
+
+        <div class="projects-grid">
+            <div><strong>Undergraduate Research Student</strong></div>
+                <article class="project">
+                    <h3>research topic: AI 어쩌구 저쩌구</h3>
+                    <p>연구 기간: 25.09.16~25.11.23</p>
+                    <p>담당 업무: 끝내주게 숨쉬기</p>
+                    <p>개발 환경: C, Python, Go</p>
+                </article>
+                <article class="project">
+                    <h3>research topic: AI 어쩌구 저쩌구</h3>
+                    <p>연구 기간: 25.09.16~25.11.23</p>
+                    <p>담당 업무: 끝내주게 숨쉬기</p>
+                    <p>개발 환경: C, Python, Go</p>
+                </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="StudentOrganization" class="section-card" aria-labelledby="StudentOrganization-title">
+      <h2 id="StudentOrganization-title" class="section-title">Student Organization</h2>
+        <div class="org-grid">
+            <article class="project">
+                <h3>Orakok</h3>
+                <p>활동 기간: 1학년 1학기~2학년 1학기</p>
+                <p>클럽 설명: 학과 내 배드민턴 소모임</p>
+                <p>활동 내용: 주기적으로 배드민턴 활동</p>
+                <p>특이 사항: 2학년 1학기 회장직 역임</p>
+            </article>
+            <article class="project">
+                <h3>K.B(Konkuk Badminton)</h3>
+                <p>활동 기간: 2학년 2학기~3학년 2학기</p>
+                <p>클럽 설명: 학교 내 배드민턴 동아리</p>
+                <p>활동 내용: 주기적으로 배드민턴 활동</p>
+                <p>특이 사항: 3학년 1학기 부회장직 역임</p>
+            </article>
+            <article class="project">
+                <h3>Rookie</h3>
+                <p>활동 기간: 2학년 2학기~3학년 2학기</p>
+                <p>클럽 설명: 학교 내 창업 동아리</p>
+                <p>활동 내용: 창업 교육 등의 활동</p>
+                <p>특이 사항: 엄청난 활동으로 잠을 잘 잠</p>
+            </article>
+            <article class="project">
+                <h3>동아리 추가</h3>
+                <p>활동 기간: 3학년 1학기~3학년 2학기</p>
+                <p>클럽 설명: 학교 내 ### 동아리</p>
+                <p>활동 내용: 학교 내 ### 동아리로 주기적으로, 활동</p>
+                <p>특이 사항: 무슨 동아리 하지</p>
+            </article>
+        </div>
+      <div class="spacer"></div>        
+    </section>
+
+    <section id="projects" class="section-card" aria-labelledby="projects-title">
+      <h2 id="projects-title" class="section-title">Projects</h2>
+      <div class="spacer"></div>
+      <h3 style="margin:.25rem 0 10px">Team Projects</h3>
+      <div class="projects-grid">
+        <article class="project">
+          <h3>한국체육진흥공단 공모전</h3>
+          <p><strong>구성원:</strong> 김은채, 박준영, 이태성, 황윤정</p>
+          <p><strong>개발 기간:</strong> 25.08.14~25.12.13</p>
+          <p><strong>담당 파트:</strong> 프론트엔드</p>
+          <p><strong>개발 환경:</strong> Flutter (Dart)</p>
+          <div class="links">
+            <a class="btn" href="https://kspo.or.kr/kspo/bbs/B0000099/view.do?nttId=63300&menuNo=200435&searchWrd=&pageIndex=1" target="_blank" rel="noreferrer">공모전 링크</a>
+            <a class="btn" href="#" target="_blank" rel="noreferrer">GitHub Repository</a>
+          </div>
+        </article>
+        <article class="project">
+          <h3>단기 프로젝트</h3>
+          <p><strong>구성원:</strong> 박준영, </p>
+          <p><strong>개발 기간:</strong> 25.12.26~26.02.25</p>
+          <p><strong>담당 파트:</strong> 프론트엔드, 백엔드, 서버, 보안</p>
+          <p><strong>개발 환경:</strong> Flutter (Dart)</p>
+          <div class="links">
+            <a class="btn" href="#" target="_blank" rel="noreferrer">GitHub Repository</a>
+          </div>
+        </article>
+      </div>
+      <div class="spacer"></div>
+      <h3 style="margin:.75rem 0 10px">Self-Developed</h3>
+      <div class="projects-grid">
+        <article class="project">
+          <h3>first project</h3>
+          <p class="muted">프로젝트 설명</p>
+          <div class="links">
+            <a class="btn" href="https://github.com/Parkjunyeong417" target="_blank" rel="noreferrer">GitHub Repository</a>
+          </div>
+        </article>
+        <article class="project">
+          <h3>two project</h3>
+          <p class="muted">프로젝트 설명</p>
+          <div class="links">
+            <a class="btn" href="https://github.com/Parkjunyeong417" target="_blank" rel="noreferrer">GitHub Repository</a>
+          </div>
+        </article>
+      </div>
+      <div class="spacer"></div>
+      <h3 style="margin:.75rem 0 10px">Clone Coding</h3>
+      <div class="projects-grid">
+        <article class="project">
+          <h3>KakaoTalk</h3>
+          <p class="muted">카카오톡 클론코딩 설명</p>
+          <div class="links">
+            <a class="btn" href="https://github.com/Parkjunyeong417" target="_blank" rel="noreferrer">GitHub Repository</a>
+          </div>
+        </article>
+        <article class="project">
+          <h3>Youtube</h3>
+          <p class="muted">유튜브 클론코딩 설명</p>
+          <div class="links">
+            <a class="btn" href="https://github.com/Parkjunyeong417" target="_blank" rel="noreferrer">GitHub Repository</a>
+          </div>
+        </article>
+      </div>
+    </section>
+    <section id="contact" class="section-card" aria-labelledby="contact-title">
+      <h2 id="contact-title" class="section-title">Contact</h2>
+      <ul class="contact-list">
+        <li><strong>p.h.:</strong> 010-0000-0000</li>
+        <li><strong>e-mail:</strong> <a href="mailto:prakjun417@gmail.com" target="_blank" rel="noreferrer">prakjun417@gmail.com</a></li>
+        <li><strong>insta:</strong> <a href="https://www.instagram.com/aruneonx" target="_blank" rel="noreferrer">@aruneonx</a></li>
+        <li><strong>github:</strong> <a href="https://github.com/Parkjunyeong417" target="_blank" rel="noreferrer">Parkjunyeong417</a></li>
+      </ul>
+    </section>
+  </main>
+  <footer class="site">
+    © 2025 박준영. All rights reserved.
+  </footer>
+  <script>
+    document.querySelectorAll('#nav-list a').forEach(a=>{
+      a.addEventListener('click',()=>{
+        const u=document.getElementById('nav-list');
+        if (getComputedStyle(document.querySelector('.menu')).display!=="none") {
+          u.style.display='none';
+          document.querySelector('.menu').setAttribute('aria-expanded','false')
+        }
+      })
+    });
+  </script>
+</body>
+</html>
