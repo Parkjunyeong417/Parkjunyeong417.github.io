@@ -408,7 +408,7 @@ export default function App() {
                       )}
 
                       <p className="skill-context">
-                        {certification.context}
+                        발급처: {certification.issuer}
                       </p>
                     </dd>
                   </div>

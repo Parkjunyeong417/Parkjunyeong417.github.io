@@ -51,23 +51,21 @@ export const skills = [
 export const certifications = [
   {
     name: "SQLD",
-    technologies: "SQL 개발자 · 취득 가정",
-    date: "",
+    technologies: "SQL 개발자",
+    date: "2026.09.11",
     dateLabel: "취득일",
-    certificateNumber: "",
+    certificateNumber: "SQLD-2026-00000",
     numberLabel: "자격번호",
-    context:
-      "SQL 개발자 자격입니다. 실제 취득일과 자격번호는 증빙 확인 후 입력해야 합니다.",
+    issuer: "한국데이터산업진흥원(Kdata)",
   },
   {
     name: "ADsP",
     technologies: "데이터 분석 준전문가",
     date: "2026.06.05",
-    dateLabel: "합격일",
+    dateLabel: "취득일",
     certificateNumber: "ADsP-049022871",
     numberLabel: "자격번호",
-    context:
-      "한국데이터산업진흥원이 시행하는 데이터 분석 분야의 국가공인 자격입니다.",
+    issuer: "한국데이터산업진흥원(Kdata)",
   },
   {
     name: "MOS 2016 Master",
@@ -76,8 +74,7 @@ export const certifications = [
     dateLabel: "취득일",
     certificateNumber: "wUvnF-22us",
     numberLabel: "인증코드",
-    context:
-      "Word 2016 Expert, Excel 2016 Expert, PowerPoint 2016, Access 2016의 인증 요건을 충족한 Microsoft Office Specialist Master입니다.",
+    issuer: "마이크로소프트(Microsoft)",
   },
   {
     name: "TOEIC Speaking",
@@ -86,8 +83,7 @@ export const certifications = [
     dateLabel: "시험일",
     certificateNumber: "102576",
     numberLabel: "수험번호",
-    context:
-      "영어 말하기 평가에서 130점, IM3 등급을 취득했습니다. 성적표에 기재된 유효기간은 2028.02.28까지입니다.",
+    issuer: "한국TOEIC위원회(YBM)",
   },
   {
     name: "TOEIC",
@@ -96,8 +92,7 @@ export const certifications = [
     dateLabel: "시험일",
     certificateNumber: "133194",
     numberLabel: "수험번호",
-    context:
-      "영어 듣기·읽기 평가에서 총 650점을 취득했습니다. 성적표에 기재된 유효기간은 2027.08.31까지입니다.",
+    issuer: "한국TOEIC위원회(YBM)",
   },
   {
     name: "자동차운전면허 1종 대형",
@@ -106,8 +101,7 @@ export const certifications = [
     dateLabel: "면허 발급일",
     certificateNumber: "13-21-606259-10",
     numberLabel: "운전면허번호",
-    context:
-      "운전경력증명서에 기재된 제1종 대형 운전면허 보유 내역입니다.",
+    issuer: "경기도남부경찰청",
   },
   {
     name: "컴퓨터활용능력 1급 필기",
@@ -116,8 +110,7 @@ export const certifications = [
     dateLabel: "필기 합격일",
     certificateNumber: "10-019994",
     numberLabel: "필기 합격확인서상 자격번호",
-    context:
-      "대한상공회의소 컴퓨터활용능력 1급 필기시험 합격 내역입니다. 실기시험 합격을 포함한 최종 자격 취득과는 구분됩니다.",
+    issuer: "대한상공회의소",
   },
 ];
 
