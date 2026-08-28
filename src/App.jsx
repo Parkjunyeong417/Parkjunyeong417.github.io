@@ -1,5 +1,4 @@
 import { useEffect, useSyncExternalStore } from "react";
-import { profile, projects, skills, experiences } from "./data.js";
 import {  profile,  projects,  skills,  certifications,  experiences,} from "./data.js";
 
 function subscribeToHash(callback) {
