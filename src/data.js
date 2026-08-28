@@ -81,8 +81,6 @@ export const certifications = [
     technologies: "130점 · Intermediate Mid 3 (IM3)",
     date: "2026.02.28",
     dateLabel: "시험일",
-    certificateNumber: "102576",
-    numberLabel: "수험번호",
     issuer: "한국TOEIC위원회(YBM)",
   },
   {
@@ -90,8 +88,6 @@ export const certifications = [
     technologies: "650점 · Listening 345 / Reading 305",
     date: "2025.08.31",
     dateLabel: "시험일",
-    certificateNumber: "133194",
-    numberLabel: "수험번호",
     issuer: "한국TOEIC위원회(YBM)",
   },
   {
