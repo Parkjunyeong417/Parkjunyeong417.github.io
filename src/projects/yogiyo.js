@@ -2,7 +2,7 @@ export default {
   id: "yogiyo",
   category: "요기요 × Oracle 해커톤",
   title: "조리·배달 동기화 서비스",
-  period: "2026.07.27 — 2026.08.21",
+  period: "2026.07.27 ~ 2026.08.21",
   status: "본선 Top 8",
   role: "프론트엔드 · LLM 연동",
   team: "2인 팀(낭만젊음사랑)",

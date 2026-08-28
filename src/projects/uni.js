@@ -2,7 +2,7 @@ export default {
   id: "uni",
   category: "충북지역 대학생 인공지능 활용 아이디어 공모전",
   title: "개인 맞춤형 AI 튜터 UNI",
-  period: "2025",
+  period: "2025.10.01 ~ 2025.11.27",
   status: "서비스 기획",
   role: "서비스 기획 · 학습 흐름 설계",
   team: "3인 팀(TIM)",

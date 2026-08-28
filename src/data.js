@@ -118,19 +118,19 @@ export const experiences = [
   {
     name: "Orakok",
     role: "컴퓨터공학과 배드민턴 소모임",
-    period: "2024년 1학기 — 2025년 1학기",
+    period: "2024년 1학기 ~ 2025년 1학기",
     description: "정기 활동에 참여했으며, 2025년 1학기 회장을 맡아 조직을 운영했습니다.",
   },
   {
     name: "K.B. · Konkuk Badminton",
     role: "교내 배드민턴 동아리 활동",
-    period: "2025년 1학기 — 2025년 2학기",
+    period: "2025년 1학기 ~ 2025년 2학기",
     description: "교내 배드민턴 동아리 활동에 참여하였습니다. 동아리 활동을 통해 배드민턴 기술과 팀워크를 향상시켰습니다.",
   },
   {
     name: "AI Convergence Research Center",
     role: "학부연구생 인턴",
-    period: "2025.09.19 — 2025.11.02",
+    period: "2025.09.19 ~ 2025.11.02",
     description:
       "딥러닝 논문을 읽고 주요 개념과 모델 구조를 정리했습니다. Python 실습으로 모델의 학습·추론 과정을 경험했습니다.",
   },

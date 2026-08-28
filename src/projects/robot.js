@@ -2,7 +2,7 @@ export default {
   id: "patrol-robot",
   category: "졸업 프로젝트",
   title: "Autonomous AI Patrol Robot",
-  period: "2026.03 — 2026.11 예정",
+  period: "2026.03 ~ 2026.11 예정",
   status: "개발 진행 중",
   role: "관제 화면 · 백엔드·자율주행 공동 개발",
   team: "2인 팀",
