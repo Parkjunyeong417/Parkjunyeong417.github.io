@@ -1,0 +1,71 @@
+import yogiyo from "./projects/yogiyo.js";
+import robot from "./projects/robot.js";
+import uni from "./projects/uni.js";
+
+export const profile = {
+  name: "박준영",
+  englishName: "Junyeong Park",
+  field: "웹 개발 · AI 서비스 · 로봇 관제",
+  introduction:
+    "고객·점주·라이더의 주문 흐름을 연결하는 웹 화면을 구현했습니다. 현재는 자율 순찰 로봇의 관제 화면과 센서 데이터 연동을 개발하고 있습니다.",
+  school: "건국대학교 GLOCAL캠퍼스",
+  major: "컴퓨터공학과",
+  graduation: "2027년 졸업 예정",
+  graduationNote: "2학기 조기졸업 예정",
+  gpa: "4.11",
+  gpaScale: "4.5",
+  email: "prakjun417@gmail.com",
+  github: "https://github.com/Parkjunyeong417",
+  // 취득을 가정한 요청을 반영했습니다. 실제 취득 확인 후 공개하세요.
+  certification: "SQLD · SQL 개발자",
+};
+
+export const projects = [yogiyo, robot, uni];
+
+export const skills = [
+  {
+    name: "Frontend",
+    technologies: "JavaScript · HTML · CSS · React · Vite",
+    context:
+      "역할별 웹 화면과 API 응답 기반 상태 표시. React는 이 포트폴리오에 사용했습니다.",
+  },
+  {
+    name: "Backend / Data",
+    technologies: "Python · FastAPI · Flask · SQL · Oracle Database",
+    context:
+      "FastAPI 연동, Flask 관제 시스템 개발, 데이터베이스·SQL 학습 및 활용.",
+  },
+  {
+    name: "Robotics / AI",
+    technologies: "ROS 2 · Nav2 · LiDAR SLAM · YOLO · OCI GenAI",
+    context:
+      "로봇 관제·자율주행 공동 개발과 AI 기능 연동. 전체 시스템 검증은 진행 중입니다.",
+  },
+  {
+    name: "기타 사용·학습",
+    technologies: "Git · GitHub · Linux · Docker · Oracle Cloud · Raspberry Pi",
+    context: "C · C++ · C# · Java · Dart · Flutter · MySQL · Kafka · Redis",
+  },
+];
+
+export const experiences = [
+  {
+    name: "AI Convergence Research Center",
+    role: "학부연구생 인턴",
+    period: "2025.09.16 — 2025.11.23",
+    description:
+      "딥러닝 논문을 읽고 주요 개념과 모델 구조를 정리했습니다. Python 실습으로 모델의 학습·추론 과정을 경험했습니다.",
+  },
+  {
+    name: "Orakok",
+    role: "컴퓨터공학과 배드민턴 소모임",
+    period: "1학년 1학기 — 2학년 1학기",
+    description: "정기 활동에 참여했으며, 2학년 1학기 회장을 맡았습니다.",
+  },
+  {
+    name: "K.B. · Konkuk Badminton",
+    role: "교내 배드민턴 동아리 활동",
+    period: "2학년 2학기 — 3학년 2학기",
+    description: "교내 배드민턴 동아리 활동에 참여했습니다.",
+  },
+];
