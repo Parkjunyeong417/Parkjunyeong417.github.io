@@ -55,8 +55,11 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--blue); outline-
 .profile-summary { padding: 25px 26px 9px; background: var(--surface); border-top: 3px solid var(--blue); }
 .summary-caption { color: var(--muted); font-size: 11px; font-weight: 650; letter-spacing: 0.4px; }
 .profile-summary h2 { margin-top: 8px; font-size: 17px; font-weight: 700; line-height: 1.5; }
-.major { margin-top: 4px !important; font-size: 14px; color: var(--muted); }
-.micro-degree { display: flex; flex-wrap: wrap; gap: 3px 8px; margin-top: 3px !important; color: var(--muted); font-size: 12px; }
+.degree-list { display: grid; gap: 3px; margin-top: 6px; }
+.primary-major, .micro-degree { display: grid; grid-template-columns: 82px minmax(0, 1fr); align-items: baseline; gap: 8px; font-size: 12px; }
+.primary-major span { color: var(--muted); font-weight: 650; }
+.primary-major strong { color: var(--ink); font-size: 14px; font-weight: 650; }
+.micro-degree { color: var(--muted); }
 .micro-degree span { color: var(--blue); font-weight: 650; }
 .profile-summary dl { margin-top: 17px; }
 .profile-summary dl > div { display: grid; grid-template-columns: 42px minmax(0, 1fr); align-items: baseline; gap: 12px; padding: 11px 0; border-top: 1px solid var(--line); font-size: 13px; }

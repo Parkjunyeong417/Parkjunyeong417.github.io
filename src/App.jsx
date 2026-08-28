@@ -297,14 +297,16 @@ export default function App() {
               <aside className="profile-summary" aria-label="학력 요약">
                 <p className="summary-caption">학력</p>
                 <h2>{profile.school}</h2>
-                <p className="micro-degree">
-                  <span>본전공</span>
-                  <p className="major">{profile.major}</p>
-                </p>
-                <p className="micro-degree">
-                  <span>마이크로디그리</span>
-                  {profile.microDegree}
-                </p>
+                <div className="degree-list">
+                  <p className="primary-major">
+                    <span>본전공</span>
+                    <strong>{profile.major}</strong>
+                  </p>
+                  <p className="micro-degree">
+                    <span>마이크로디그리</span>
+                    {profile.microDegree}
+                  </p>
+                </div>
                 <dl>
                   <div className="graduation-row">
                     <dt>졸업</dt>
