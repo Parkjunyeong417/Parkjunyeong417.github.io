@@ -101,7 +101,7 @@ export const certifications = [
     certificateNumber: "",
     numberLabel: "운전면허번호",
     issuer: "경기도남부경찰청",
-  },
+  },/*
   {
     name: "컴퓨터활용능력 1급 필기",
     technologies: "필기시험 합격 · 최종 자격 취득 아님",
@@ -110,7 +110,7 @@ export const certifications = [
     certificateNumber: "10-019994",
     numberLabel: "필기 합격확인서상 자격번호",
     issuer: "대한상공회의소",
-  },
+  },*/
 ];
 
 
