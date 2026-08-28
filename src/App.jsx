@@ -294,8 +294,8 @@ export default function App() {
                 </div>
               </div>
 
-              <aside className="profile-summary" aria-label="학력 및 자격 요약">
-                <p className="summary-caption">학력 및 자격</p>
+              <aside className="profile-summary" aria-label="학력 요약">
+                <p className="summary-caption">학력</p>
                 <h2>{profile.school}</h2>
                 <p className="major">{profile.major}</p>
                 <dl>
@@ -311,6 +311,9 @@ export default function App() {
                     <dd className="gpa">
                       <strong>{profile.gpa}</strong>
                       <span>/ {profile.gpaScale}</span>
+                      <span>
+                        (전공 {profile.majorGpa} / {profile.majorGpaScale})
+                      </span>
                     </dd>
                   </div>
                 </dl>
