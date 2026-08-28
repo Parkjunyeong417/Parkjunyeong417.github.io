@@ -315,7 +315,7 @@ export default function App() {
                       <span>{profile.graduationNote}</span>
                     </dd>
                   </div>
-                  <div>
+                  <div className="gpa-row">
                     <dt>학점</dt>
                     <dd className="gpa">
                       <strong>{profile.gpa}</strong>

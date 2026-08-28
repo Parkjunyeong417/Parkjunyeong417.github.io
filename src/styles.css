@@ -172,6 +172,7 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--blue); outline-
   .profile-summary { padding: 20px 20px 8px; }
   .profile-summary dl { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); column-gap: 20px; }
   .profile-summary .graduation-row { grid-column: 1 / -1; }
+  .profile-summary .gpa-row { grid-column: 1 / -1; }
   .profile-summary dl > div { grid-template-columns: 30px minmax(0, 1fr); gap: 7px; }
   .content-section { padding-top: 24px; padding-bottom: 27px; }
   .section-heading { display: block; padding-bottom: 15px; }
