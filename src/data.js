@@ -51,10 +51,73 @@ export const skills = [
 export const certifications = [
   {
     name: "SQLD",
-    technologies: "SQL 개발자",
-    date: "2026.08.22",
+    technologies: "SQL 개발자 · 취득 가정",
+    date: "",
+    dateLabel: "취득일",
+    certificateNumber: "",
+    numberLabel: "자격번호",
     context:
-      "데이터베이스 설계, SQL 작성 및 최적화, 데이터 분석과 활용 능력을 검증하는 자격증입니다.",
+      "SQL 개발자 자격입니다. 실제 취득일과 자격번호는 증빙 확인 후 입력해야 합니다.",
+  },
+  {
+    name: "ADsP",
+    technologies: "데이터 분석 준전문가",
+    date: "2026.06.05",
+    dateLabel: "합격일",
+    certificateNumber: "ADsP-049022871",
+    numberLabel: "자격번호",
+    context:
+      "한국데이터산업진흥원이 시행하는 데이터 분석 분야의 국가공인 자격입니다.",
+  },
+  {
+    name: "MOS 2016 Master",
+    technologies: "Microsoft Office Specialist Master",
+    date: "2024.01.10",
+    dateLabel: "취득일",
+    certificateNumber: "wUvnF-22us",
+    numberLabel: "인증코드",
+    context:
+      "Word 2016 Expert, Excel 2016 Expert, PowerPoint 2016, Access 2016의 인증 요건을 충족한 Microsoft Office Specialist Master입니다.",
+  },
+  {
+    name: "TOEIC Speaking",
+    technologies: "130점 · Intermediate Mid 3 (IM3)",
+    date: "2026.02.28",
+    dateLabel: "시험일",
+    certificateNumber: "102576",
+    numberLabel: "수험번호",
+    context:
+      "영어 말하기 평가에서 130점, IM3 등급을 취득했습니다. 성적표에 기재된 유효기간은 2028.02.28까지입니다.",
+  },
+  {
+    name: "TOEIC",
+    technologies: "650점 · Listening 345 / Reading 305",
+    date: "2025.08.31",
+    dateLabel: "시험일",
+    certificateNumber: "133194",
+    numberLabel: "수험번호",
+    context:
+      "영어 듣기·읽기 평가에서 총 650점을 취득했습니다. 성적표에 기재된 유효기간은 2027.08.31까지입니다.",
+  },
+  {
+    name: "자동차운전면허 1종 대형",
+    technologies: "제1종 대형 운전면허",
+    date: "2023.09.06",
+    dateLabel: "면허 발급일",
+    certificateNumber: "13-21-606259-10",
+    numberLabel: "운전면허번호",
+    context:
+      "운전경력증명서에 기재된 제1종 대형 운전면허 보유 내역입니다.",
+  },
+  {
+    name: "컴퓨터활용능력 1급 필기",
+    technologies: "필기시험 합격 · 최종 자격 취득 아님",
+    date: "2026.02.11",
+    dateLabel: "필기 합격일",
+    certificateNumber: "10-019994",
+    numberLabel: "필기 합격확인서상 자격번호",
+    context:
+      "대한상공회의소 컴퓨터활용능력 1급 필기시험 합격 내역입니다. 실기시험 합격을 포함한 최종 자격 취득과는 구분됩니다.",
   },
 ];
 
