@@ -298,6 +298,10 @@ export default function App() {
                 <p className="summary-caption">학력</p>
                 <h2>{profile.school}</h2>
                 <p className="major">{profile.major}</p>
+                <p className="micro-degree">
+                  <span>마이크로디그리</span>
+                  {profile.microDegree}
+                </p>
                 <dl>
                   <div className="graduation-row">
                     <dt>졸업</dt>

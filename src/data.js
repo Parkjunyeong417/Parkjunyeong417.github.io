@@ -10,6 +10,7 @@ export const profile = {
     "고객·점주·라이더의 주문 흐름을 연결하는 웹 화면을 구현했습니다. 현재는 자율 순찰 로봇의 관제 화면과 센서 데이터 연동을 개발하고 있습니다.",
   school: "건국대학교 GLOCAL캠퍼스",
   major: "컴퓨터공학과",
+  microDegree: "인공지능 전문가 양성과정",
   graduation: "2027년 졸업 예정",
   graduationNote: "2학기 조기졸업 예정",
   gpa: "4.11",
