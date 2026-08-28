@@ -234,6 +234,7 @@ export default function App() {
           <nav className="navigation" aria-label="주요 메뉴">
             <a href="#projects">프로젝트</a>
             <a href="#skills">기술</a>
+            <a href="#certification">자격증</a>
             <a href="#experience">경험·활동</a>
             <a href="#contact">연락처</a>
           </nav>
@@ -362,11 +363,35 @@ export default function App() {
 
             <section
               className="content-section"
+              id="certification"
+              aria-labelledby="certification-title"
+            >
+              <SectionHeading
+                number="03"
+                id="certification-title"
+                title="자격증"
+                description="프로젝트 활용 맥락과 사용·학습 경험을 구분했습니다."
+              />
+              <dl className="skills-list">
+                {skills.map((skill) => (
+                  <div className="skill-row" key={skill.name}>
+                    <dt>{skill.name}</dt>
+                    <dd>
+                      <p className="skill-technologies">{skill.technologies}</p>
+                      <p className="skill-context">{skill.context}</p>
+                    </dd>
+                  </div>
+                ))}
+              </dl>
+            </section>
+
+            <section
+              className="content-section"
               id="experience"
               aria-labelledby="experience-title"
             >
               <SectionHeading
-                number="03"
+                number="04"
                 id="experience-title"
                 title="경험 및 활동"
                 description="연구실 실습과 교내 활동 기록입니다."
