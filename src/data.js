@@ -48,6 +48,17 @@ export const skills = [
   },
 ];
 
+export const certifications = [
+  {
+    name: "SQLD",
+    technologies: "SQL 개발자",
+    date: "2026.08.22",
+    context:
+      "데이터베이스 설계, SQL 작성 및 최적화, 데이터 분석과 활용 능력을 검증하는 자격증입니다.",
+  },
+];
+
+
 export const experiences = [
   {
     name: "AI Convergence Research Center",

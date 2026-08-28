@@ -1,5 +1,6 @@
 import { useEffect, useSyncExternalStore } from "react";
 import { profile, projects, skills, experiences } from "./data.js";
+import {  profile,  projects,  skills,  certifications,  experiences,} from "./data.js";
 
 function subscribeToHash(callback) {
   window.addEventListener("hashchange", callback);
@@ -323,46 +324,6 @@ export default function App() {
 
             <section
               className="content-section"
-              id="projects"
-              aria-labelledby="projects-title"
-            >
-              <SectionHeading
-                number="01"
-                id="projects-title"
-                title="프로젝트"
-                description="프로젝트를 선택하면 구현 과정과 상세 내용을 볼 수 있습니다."
-              />
-              {projects.map((project) => (
-                <Project key={project.id} project={project} />
-              ))}
-            </section>
-
-            <section
-              className="content-section"
-              id="skills"
-              aria-labelledby="skills-title"
-            >
-              <SectionHeading
-                number="02"
-                id="skills-title"
-                title="기술"
-                description="프로젝트 활용 맥락과 사용·학습 경험을 구분했습니다."
-              />
-              <dl className="skills-list">
-                {skills.map((skill) => (
-                  <div className="skill-row" key={skill.name}>
-                    <dt>{skill.name}</dt>
-                    <dd>
-                      <p className="skill-technologies">{skill.technologies}</p>
-                      <p className="skill-context">{skill.context}</p>
-                    </dd>
-                  </div>
-                ))}
-              </dl>
-            </section>
-
-            <section
-              className="content-section"
               id="certification"
               aria-labelledby="certification-title"
             >
@@ -370,48 +331,33 @@ export default function App() {
                 number="03"
                 id="certification-title"
                 title="자격증"
-                description="프로젝트 활용 맥락과 사용·학습 경험을 구분했습니다."
+                description="보유 중인 자격증과 취득 시기입니다."
               />
+
               <dl className="skills-list">
-                {skills.map((skill) => (
-                  <div className="skill-row" key={skill.name}>
-                    <dt>{skill.name}</dt>
+                {certifications.map((certification) => (
+                  <div className="skill-row" key={certification.name}>
+                    <dt>{certification.name}</dt>
+
                     <dd>
-                      <p className="skill-technologies">{skill.technologies}</p>
-                      <p className="skill-context">{skill.context}</p>
+                      <p className="skill-technologies">
+                        {certification.technologies}
+                      </p>
+
+                      <p className="skill-context">
+                        취득일:{" "}
+                        <time dateTime={certification.date.replaceAll(".", "-")}>
+                          {certification.date}
+                        </time>
+                      </p>
+
+                      <p className="skill-context">
+                        {certification.context}
+                      </p>
                     </dd>
                   </div>
                 ))}
               </dl>
-            </section>
-
-            <section
-              className="content-section"
-              id="experience"
-              aria-labelledby="experience-title"
-            >
-              <SectionHeading
-                number="04"
-                id="experience-title"
-                title="경험 및 활동"
-                description="연구실 실습과 교내 활동 기록입니다."
-              />
-              <div className="experience-list">
-                {experiences.map((experience) => (
-                  <article className="experience-row" key={experience.name}>
-                    <div>
-                      <h3>{experience.name}</h3>
-                      <p className="experience-period">{experience.period}</p>
-                    </div>
-                    <div>
-                      <p className="experience-role">{experience.role}</p>
-                      <p className="experience-description">
-                        {experience.description}
-                      </p>
-                    </div>
-                  </article>
-                ))}
-              </div>
             </section>
           </>
         )}
