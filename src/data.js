@@ -95,7 +95,7 @@ export const certifications = [
     technologies: "제1종 대형 운전면허",
     date: "2023.09.06",
     dateLabel: "면허 발급일",
-    certificateNumber: "13-21-606259-10",
+    certificateNumber: "",
     numberLabel: "운전면허번호",
     issuer: "경기도남부경찰청",
   },

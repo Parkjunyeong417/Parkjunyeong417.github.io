@@ -313,10 +313,6 @@ export default function App() {
                       <span>/ {profile.gpaScale}</span>
                     </dd>
                   </div>
-                  <div>
-                    <dt>자격</dt>
-                    <dd>{profile.certification}</dd>
-                  </div>
                 </dl>
               </aside>
             </section>
