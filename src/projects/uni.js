@@ -5,7 +5,7 @@ export default {
   period: "2025",
   status: "서비스 기획",
   role: "서비스 기획 · 학습 흐름 설계",
-  team: "TIM 팀",
+  team: "3인 팀(TIM)",
   summary:
     "생성형 AI가 정답을 바로 제공하면서 학습자의 사고 과정이 줄어드는 문제에 주목했습니다. U&I 학습유형에 맞춘 경로와 단계별 힌트를 제공하는 AI 튜터를 제안했습니다.",
   contributions: [

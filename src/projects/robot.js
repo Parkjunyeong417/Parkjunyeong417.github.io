@@ -5,7 +5,7 @@ export default {
   period: "2026.03 — 2026.11 예정",
   status: "개발 진행 중",
   role: "관제 화면 · 백엔드·자율주행 공동 개발",
-  team: "팀 프로젝트",
+  team: "2인 팀",
   summary:
     "카메라와 LiDAR로 주변 환경을 인식하고, 이상 상황을 관제 화면과 알림으로 전달하는 자율 순찰 로봇을 개발하고 있습니다.",
   contributions: [
