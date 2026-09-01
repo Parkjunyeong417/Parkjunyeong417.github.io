@@ -19,7 +19,7 @@ body { margin: 0; }
 button, input, textarea { font: inherit; }
 a { color: inherit; text-decoration: none; }
 button, a { -webkit-tap-highlight-color: transparent; }
-a:focus-visible, button:focus-visible { outline: 3px solid var(--blue); outline-offset: 5px; border-radius: 3px; }
+a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px solid var(--blue); outline-offset: 5px; border-radius: 3px; }
 ::selection { background: #dce8fa; color: #102849; }
 .portfolio { min-width: 0; line-height: 1.7; word-break: keep-all; overflow-wrap: anywhere; }
 .portfolio :where(h1, h2, h3, h4, p, dl, dd, ul) { margin: 0; }
@@ -38,10 +38,15 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--blue); outline-
 
 .intro { display: grid; grid-template-columns: minmax(0, 1fr) 340px; align-items: start; gap: 72px; padding: 64px 0 56px; }
 .eyebrow { color: var(--blue); font-size: 11px; font-weight: 750; letter-spacing: 1.7px; }
+.profile-heading { display: flex; align-items: center; gap: 24px; margin-top: 18px; }
+.profile-photo { display: block; flex-shrink: 0; width: 96px; height: 128px; object-fit: cover; border-radius: 4px; }
+.profile-heading-text { min-width: 0; }
 .name-line { display: flex; align-items: baseline; flex-wrap: wrap; column-gap: 16px; margin-top: 14px; }
+.profile-heading .name-line { margin-top: 0; }
 .name-line h1 { font-size: 44px; font-weight: 750; line-height: 1.25; letter-spacing: -1.7px; }
 .name-line > span { font-size: 18px; color: var(--muted); letter-spacing: -0.3px; }
 .intro-field { margin-top: 18px !important; font-size: 18px; font-weight: 650; letter-spacing: -0.5px; }
+.profile-heading .intro-field { margin-top: 10px !important; }
 .intro-description { max-width: 580px; margin-top: 14px !important; color: var(--muted); font-size: 15px; line-height: 1.85; }
 .intro-links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 25px; }
 .button { display: inline-flex; align-items: center; justify-content: center; gap: 18px; min-height: 42px; padding: 8px 19px; border: 1px solid transparent; border-radius: 4px; font-size: 13px; font-weight: 650; transition: background 120ms ease; }
@@ -129,7 +134,7 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--blue); outline-
 .gallery-link:hover img { border-color: #aabedb; }
 .project-gallery figcaption { margin-top: 9px; color: var(--muted); font-size: 12px; }
 .project-gallery-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-.project-gallery-grid figure:first-child:last-child { grid-column: 1 / -1; }
+.project-gallery-grid .gallery-featured, .project-gallery-grid .gallery-wide { grid-column: 1 / -1; }
 .evidence-intro { margin-top: -4px !important; }
 .evidence-list { display: grid; gap: 10px; margin-top: 17px !important; }
 .evidence-link { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: 14px; padding: 14px 15px; border: 1px solid var(--line); border-radius: 4px; background: #fff; transition: background 120ms ease, border-color 120ms ease; }
@@ -151,6 +156,16 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--blue); outline-
 .experience-period { margin-top: 5px !important; color: var(--muted); font-size: 11px; }
 .experience-role { font-size: 13px; font-weight: 650; }
 .experience-description { margin-top: 6px !important; color: var(--muted); font-size: 13px; line-height: 1.85; }
+.course-details { margin-top: 15px; border: 1px solid var(--line); border-radius: 4px; background: #fff; }
+.course-details summary { padding: 11px 14px; color: var(--blue); cursor: pointer; font-size: 12px; font-weight: 700; }
+.course-details[open] summary { border-bottom: 1px solid var(--line); }
+.course-list { display: grid; }
+.course-list li { padding: 14px; border-bottom: 1px solid var(--line); }
+.course-list li:last-child { border-bottom: 0; }
+.course-heading { display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: 5px 15px; }
+.course-heading strong { font-size: 13px; }
+.course-heading span { color: var(--blue); font-size: 11px; font-weight: 650; }
+.course-list p { margin-top: 6px !important; color: var(--muted); font-size: 12px; line-height: 1.75; }
 
 .site-footer { margin-top: 26px; background: var(--surface); border-top: 1px solid var(--line); }
 .footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 25px; padding-block: 32px; }
@@ -178,6 +193,10 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--blue); outline-
   .navigation { width: 100%; justify-content: space-between; gap: 12px; font-size: 12px; }
   .navigation a { min-height: 43px; }
   .intro { grid-template-columns: minmax(0, 1fr); gap: 28px; padding: 34px 0 30px; }
+  .profile-heading { gap: 16px; }
+  .profile-photo { width: 84px; height: 112px; }
+  .profile-heading .name-line { flex-direction: column; gap: 4px; }
+  .profile-heading .intro-field { font-size: 14px; }
   .name-line h1 { font-size: 36px; }
   .name-line > span { font-size: 16px; }
   .intro-field { font-size: 16px; }
@@ -208,11 +227,13 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--blue); outline-
   .detail-section h2 { font-size: 18px; }
   .detail-section > p, .detail-section .contributions { font-size: 14px; }
   .project-gallery-grid { grid-template-columns: minmax(0, 1fr); }
+  .project-gallery-grid .gallery-featured, .project-gallery-grid .gallery-wide { grid-column: auto; }
   .evidence-link { gap: 11px; padding: 13px; }
   .skill-row { grid-template-columns: minmax(0, 1fr); gap: 7px; padding-block: 18px; }
   .skill-row dt { font-size: 13px; }
   .skill-technologies { font-size: 13px; }
   .experience-row { grid-template-columns: minmax(0, 1fr); gap: 12px; padding-block: 21px; }
+  .course-heading { display: grid; }
   .footer-inner { flex-direction: column; align-items: flex-start; gap: 16px; }
   .contact-links { gap: 4px 24px; }
 }
@@ -238,7 +259,7 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--blue); outline-
   .profile-summary { background: white; border: 1px solid var(--line); padding: 15px; }
   .name-line h1 { font-size: 30px; }
   .content-section { padding-block: 15px; }
-  .project, .experience-row, .skill-row, .site-footer { break-inside: avoid; }
+  .project, .experience-row, .skill-row, .site-footer, .course-list li { break-inside: avoid; }
   .detail-layout { display: flex; flex-direction: column; gap: 24px; }
   .detail-aside { order: -1; position: static; width: 100%; background: white; }
   .detail-aside dl { display: flex; flex-wrap: wrap; gap: 24px; }
@@ -247,53 +268,6 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--blue); outline-
   .back-link, .detail-body > .button { display: none; }
   .site-footer { margin-top: 15px; background: white; }
   .footer-inner { padding-block: 16px; }
+  .course-details .course-list { display: grid !important; }
   a { color: var(--ink); }
-}
-
-.profile-heading {
-  display: flex;
-  align-items: center;
-  gap: 24px;
-  margin-top: 18px;
-}
-
-.profile-photo {
-  display: block;
-  flex-shrink: 0;
-  width: 96px;
-  height: 128px;
-  object-fit: cover;
-  border-radius: 4px;
-}
-
-.profile-heading-text {
-  min-width: 0;
-}
-
-.profile-heading .name-line {
-  margin-top: 0;
-}
-
-.profile-heading .intro-field {
-  margin-top: 10px !important;
-}
-
-@media (max-width: 760px) {
-  .profile-heading {
-    gap: 16px;
-  }
-
-  .profile-photo {
-    width: 84px;
-    height: 112px;
-  }
-
-  .profile-heading .name-line {
-    flex-direction: column;
-    gap: 4px;
-  }
-
-  .profile-heading .intro-field {
-    font-size: 14px;
-  }
 }

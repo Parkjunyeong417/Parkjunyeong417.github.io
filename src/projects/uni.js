@@ -10,7 +10,8 @@ export default {
     "생성형 AI가 정답을 바로 제공하면서 학습자의 사고 과정이 줄어드는 문제에 주목했습니다. U&I 학습유형에 맞춘 경로와 단계별 힌트를 제공하는 AI 튜터를 제안했습니다.",
   contributions: [
     "U&I 학습유형과 개인별 학습 경로를 연결하는 서비스 구조 기획",
-    "힌트 제공 → 스스로 풀이 → 답안 비교 → 피드백의 학습 과정 설계",
+    "학습유형별 경로와 힌트 우선 제공 방식 설계",
+    "스스로 풀이 → 답안 제출 → 정답 비교 → 메타인지 피드백의 학습 과정 설계",
   ],
   result: "개인화 학습 서비스 구조 제안",
   scope:
@@ -36,6 +37,5 @@ export default {
     },
   ],
   images: [],
-  // Add PDF evidence after placing the file under public/projects/uni/documents/.
   evidence: [],
 };
