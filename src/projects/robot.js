@@ -40,4 +40,6 @@ export default {
     },
   ],
   images: [],
+  // Add PDF evidence after placing the file under public/projects/patrol-robot/documents/.
+  evidence: [],
 };

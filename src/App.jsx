@@ -26,6 +26,30 @@ function ExternalLink({ href, children, className = "" }) {
   );
 }
 
+function EvidenceDocument({ document }) {
+  const metadata = [document.issuer, document.date].filter(Boolean).join(" · ");
+
+  return (
+    <li className="evidence-item">
+      <a
+        href={document.src}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="evidence-link"
+        aria-label={`${document.title} PDF 새 탭에서 열기`}
+      >
+        <span className="evidence-file-type">{document.type || "PDF"}</span>
+        <span className="evidence-copy">
+          <strong>{document.title}</strong>
+          {document.description && <span>{document.description}</span>}
+          {metadata && <small>{metadata}</small>}
+        </span>
+        <span className="evidence-open" aria-hidden="true">열기</span>
+      </a>
+    </li>
+  );
+}
+
 function SectionHeading({ number, id, title, description }) {
   return (
     <div className="section-heading">
@@ -130,19 +154,44 @@ export function ProjectDetail({ project }) {
           {project.images?.length > 0 && (
             <section className="detail-section">
               <h2>프로젝트 화면</h2>
-              <div className="project-gallery">
+              <div
+                className={`project-gallery ${
+                  project.images.length > 1 ? "project-gallery-grid" : ""
+                }`}
+              >
                 {project.images.map((image) => (
                   <figure key={image.src}>
-                    <img
-                      src={image.src}
-                      alt={image.alt}
-                      loading="lazy"
-                      decoding="async"
-                    />
+                    <a
+                      className="gallery-link"
+                      href={image.src}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`${image.alt} 원본 이미지 새 탭에서 보기`}
+                    >
+                      <img
+                        src={image.src}
+                        alt={image.alt}
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </a>
                     {image.caption && <figcaption>{image.caption}</figcaption>}
                   </figure>
                 ))}
               </div>
+            </section>
+          )}
+          {project.evidence?.length > 0 && (
+            <section className="detail-section evidence-section">
+              <h2>증빙 문서</h2>
+              <p className="evidence-intro">
+                참가 확인증, 상장 등 프로젝트와 관련된 원본 PDF 문서입니다.
+              </p>
+              <ul className="evidence-list">
+                {project.evidence.map((document) => (
+                  <EvidenceDocument key={document.src} document={document} />
+                ))}
+              </ul>
             </section>
           )}
           <section className="detail-section detail-outcome">

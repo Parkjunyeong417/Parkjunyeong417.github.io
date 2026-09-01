@@ -125,7 +125,20 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--blue); outline-
 .project-gallery { display: grid; gap: 24px; }
 .project-gallery figure { margin: 0; }
 .project-gallery img { display: block; width: 100%; height: auto; border: 1px solid var(--line); border-radius: 4px; }
+.gallery-link { display: block; overflow: hidden; border-radius: 4px; }
+.gallery-link:hover img { border-color: #aabedb; }
 .project-gallery figcaption { margin-top: 9px; color: var(--muted); font-size: 12px; }
+.project-gallery-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.project-gallery-grid figure:first-child:last-child { grid-column: 1 / -1; }
+.evidence-intro { margin-top: -4px !important; }
+.evidence-list { display: grid; gap: 10px; margin-top: 17px !important; }
+.evidence-link { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: 14px; padding: 14px 15px; border: 1px solid var(--line); border-radius: 4px; background: #fff; transition: background 120ms ease, border-color 120ms ease; }
+.evidence-link:hover { border-color: #aabedb; background: #f8faff; }
+.evidence-file-type { display: inline-flex; align-items: center; justify-content: center; min-width: 38px; min-height: 25px; padding: 2px 6px; border-radius: 3px; background: #edf2fa; color: var(--blue); font-size: 10px; font-weight: 750; letter-spacing: 0.4px; }
+.evidence-copy { display: grid; gap: 2px; min-width: 0; }
+.evidence-copy strong { font-size: 14px; line-height: 1.5; }
+.evidence-copy > span, .evidence-copy small { color: var(--muted); font-size: 12px; line-height: 1.55; }
+.evidence-open { color: var(--blue); font-size: 12px; font-weight: 650; white-space: nowrap; }
 .not-found { padding: 75px 0; }
 .not-found h1 { margin-bottom: 24px; font-size: 26px; }
 
@@ -194,6 +207,8 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--blue); outline-
   .detail-aside h2 { margin-top: 17px; }
   .detail-section h2 { font-size: 18px; }
   .detail-section > p, .detail-section .contributions { font-size: 14px; }
+  .project-gallery-grid { grid-template-columns: minmax(0, 1fr); }
+  .evidence-link { gap: 11px; padding: 13px; }
   .skill-row { grid-template-columns: minmax(0, 1fr); gap: 7px; padding-block: 18px; }
   .skill-row dt { font-size: 13px; }
   .skill-technologies { font-size: 13px; }

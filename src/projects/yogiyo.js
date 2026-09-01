@@ -36,4 +36,7 @@ export default {
   ],
   // 예: { src: "projects/yogiyo/customer.png", alt: "고객 주문 상태 화면", caption: "주문 단계별 상태 표시" }
   images: [],
+  // Add PDF evidence after placing the file under public/projects/yogiyo/documents/.
+  // evidence: [{ src: "projects/yogiyo/documents/participation.pdf", title: "참가 확인증", description: "Oracle AI Hackathon", issuer: "주최 기관", date: "2026.08", type: "PDF" }],
+  evidence: [],
 };

@@ -36,4 +36,6 @@ export default {
     },
   ],
   images: [],
+  // Add PDF evidence after placing the file under public/projects/uni/documents/.
+  evidence: [],
 };
