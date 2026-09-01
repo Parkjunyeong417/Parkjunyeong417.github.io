@@ -28,6 +28,7 @@ export default {
     "YOLO",
     "Raspberry Pi",
   ],
+  link: "https://github.com/jcy9066/dabom_capstone",
   sections: [
     {
       title: "프로젝트 목표",
