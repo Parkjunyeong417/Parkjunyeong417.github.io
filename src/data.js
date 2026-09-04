@@ -53,13 +53,13 @@ export const skills = [
 ];
 
 export const certifications = [
-  {
+/*  {
     name: "SQLD",
     technologies: "SQL 개발자",
     date: "2026.09.11",
     dateLabel: "취득일",
     issuer: "한국데이터산업진흥원(Kdata)",
-  },
+  },*/
   {
     name: "ADsP",
     technologies: "데이터 분석 준전문가",
