@@ -34,7 +34,7 @@ export const skills = [
   },
   {
     name: "Data / API Integration",
-    technologies: "Python · SQL · Oracle Database · REST API",
+    technologies: "Python · SQL · REST API",
     context:
       "SQL 기반 데이터 활용 경험과 프로젝트에서 REST API 응답을 프론트엔드 화면 상태에 연동한 경험이 있습니다.",
   },
@@ -46,7 +46,7 @@ export const skills = [
   },
   {
     name: "Tools / Environment",
-    technologies: "Git · GitHub · Linux · Docker · Oracle Cloud · Raspberry Pi",
+    technologies: "Git · GitHub · Linux · Docker · Raspberry Pi",
     context:
       "프로젝트 버전 관리, 개발 환경 구성, 클라우드 데모와 로봇 시스템 통합 과정에서 사용했습니다.",
   },
