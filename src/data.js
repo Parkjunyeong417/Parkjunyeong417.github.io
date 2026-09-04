@@ -17,7 +17,7 @@ export const profile = {
   gpaScale: "4.5",
   majorGpa: "4.14",
   majorGpaScale: "4.5",
-  email: "prakjun417@gmail.com",
+  email: "junyeong.parkk@gmail.com",
   github: "https://github.com/Parkjunyeong417",
   // 취득을 가정한 요청을 반영했습니다. 실제 취득 확인 후 공개하세요.
   certification: "SQLD · SQL 개발자",

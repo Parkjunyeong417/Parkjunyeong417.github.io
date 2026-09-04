@@ -9,7 +9,11 @@ export default function Footer({ profile }) {
           <p>{profile.name} · {profile.englishName}</p>
         </div>
         <div className="contact-links">
-          <a href={`mailto:${profile.email}`}>{profile.email}</a>
+          <ExternalLink
+            href={`https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(profile.email)}`}
+          >
+            {profile.email}
+          </ExternalLink>
           <ExternalLink href={profile.github}>GitHub</ExternalLink>
         </div>
       </div>

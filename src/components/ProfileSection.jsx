@@ -26,9 +26,12 @@ export default function ProfileSection({ profile }) {
           <ExternalLink href={profile.github} className="button button-primary">
             GitHub
           </ExternalLink>
-          <a className="button button-secondary" href={`mailto:${profile.email}`}>
+          <ExternalLink
+            href={`https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(profile.email)}`}
+            className="button button-secondary"
+          >
             이메일
-          </a>
+          </ExternalLink>
         </div>
       </div>
 
